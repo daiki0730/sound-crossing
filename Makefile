@@ -4,6 +4,9 @@ up:
 stop:
 	docker-compose stop
 
+restart:
+	docker-compose restart
+
 ps:
 	docker ps
 
