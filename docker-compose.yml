@@ -14,7 +14,7 @@ services:
 
   app:
     build: "./.docker/php"
-    container_name: sound-crossing-nginx-app
+    container_name: sound-crossing-app
     working_dir: /app
     volumes:
       - ".:/app"
@@ -31,20 +31,20 @@ services:
     volumes:
       - "./storage/mysql:/var/lib/mysql"
     environment:
-      MYSQL_DATABASE: sound-crossing-nginx
+      MYSQL_DATABASE: sound-crossing
       MYSQL_USER: root
       MYSQL_PASSWORD: rootroot
       MYSQL_ROOT_PASSWORD: rootroot
-    container_name: sound-crossing-nginx-mysql
+    container_name: sound-crossing-mysql
 
   redis:
     image: redis:5.0.5-alpine
-    container_name: sound-crossing-nginx-redis
+    container_name: sound-crossing-redis
     ports:
       - "6379:6379"
 
   mailcatcher:
     image: schickling/mailcatcher
-    container_name: sound-crossing-nginx-mailcatcher
+    container_name: sound-crossing-mailcatcher
     ports:
       - "1080:1080"

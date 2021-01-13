@@ -11,4 +11,4 @@ ps:
 	docker ps
 
 work:
-	docker exec -it fuchart-app bash
+	docker exec -it sound-crossing-app bash
