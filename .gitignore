@@ -1,3 +1,4 @@
+.gitignore
 /storage/mysql
 .env
 node_modules
