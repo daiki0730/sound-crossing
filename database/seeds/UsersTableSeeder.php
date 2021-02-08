@@ -16,7 +16,6 @@ class UsersTableSeeder extends Seeder
             'name_kana'      => '大輝',
             'email'           => 'daikibassman@gmail.com',
             'password'        => Hash::make('secret'),
-            
         ]);
     }
 }
