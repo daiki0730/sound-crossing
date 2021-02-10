@@ -12,10 +12,14 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name'       => '西田',
-            'name_kana'      => '大輝',
-            'email'           => 'daikibassman@gmail.com',
-            'password'        => Hash::make('secret')
+            'name'      => '',
+            'name_kana' => '',
+            'email'     => 'z41.daiki.nishida@gmail.com',
+            'password'  => Hash::make('secret'),
+            'gender'    => 1,
+            'birthdate' => '1991-07-30',
+            'biography' => 'テスト用アカウント',
+            'status'    => 1
         ]);
     }
 }

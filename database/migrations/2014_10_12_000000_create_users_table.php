@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('image')->nullable()->comment('アカウント写真');
             $table->string('url')->nullable()->comment('URL');
             $table->string('status')->comment('アカウントステータス');
-            $table->string('last_login_at')->comment('最終ログイン日時');
+            $table->string('last_login_at')->nullable()->comment('最終ログイン日時');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
