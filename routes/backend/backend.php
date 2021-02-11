@@ -1,3 +1,6 @@
 <?php
 
-Route::get("/admin", "Backend\TopController@index");
+Route::namespace('Backend')->prefix('admin')->name('backend.')->group(function () {
+  Auth::routes();
+  Route::get('/', 'AdminController@index')->name('admin');
+});
