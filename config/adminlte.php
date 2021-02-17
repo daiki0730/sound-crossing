@@ -227,7 +227,8 @@ return [
         [
             'text' => 'ユーザー一覧',
             'url'  => '',
-            'icon' => 'fas fa-users',
+            'icon' => 'fas fa-users'
+            ,
         ],
     ],
 
