@@ -4,15 +4,15 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class RepositoryServiceProvider extends ServiceProvider
 {
     public $bindings = [
-        \App\Services\Admin\AdminServiceInterface::class => \App\Services\Admin\AdminService::class,
-        \App\Services\User\UserServiceInterface::class => \App\Services\User\UserService::class
+        \App\Repository\Admin\AdminContract::class => \App\Repository\Admin\EloquentAdminRepository::class,
+        \App\Repository\User\UserContract::class => \App\Repository\User\EloquentUserRepository::class
     ];
 
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
