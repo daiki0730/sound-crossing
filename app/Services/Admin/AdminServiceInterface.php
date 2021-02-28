@@ -4,6 +4,7 @@ namespace App\Services\Admin;
 
 use App\Models\Admin;
 
+
 interface AdminServiceInterface
 {
     /**
