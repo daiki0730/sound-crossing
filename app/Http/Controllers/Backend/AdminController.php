@@ -13,6 +13,7 @@ class AdminController extends Controller
         
         return view('backend.admin.index')
             ->with('$users' => users);
+            
     }
 
     /**
