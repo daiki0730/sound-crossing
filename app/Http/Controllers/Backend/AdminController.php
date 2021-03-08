@@ -12,8 +12,7 @@ class AdminController extends Controller
         $users = $this->user->getAllUsers();
         
         return view('backend.admin.index')
-            ->with('$users' => users);
-            
+            ->with('$users' => users);       
     }
 
     /**
