@@ -9,7 +9,7 @@ class AdminController extends Controller
 {   
     public function index()
     {
-        // $users = $this->user->getAllUsers();
+        $users = $this->user->getAllUsers();
         
         return view('backend.admin.index');       
     }
