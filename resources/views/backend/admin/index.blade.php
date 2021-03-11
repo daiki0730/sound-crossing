@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    @foreach($users as $user)
+      <p>{{$user->name}}</p>
+    @endforeach
 @stop
 
 @section('css')

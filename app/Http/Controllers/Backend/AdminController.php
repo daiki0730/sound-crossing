@@ -4,14 +4,34 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Services\User\UserServiceInterface;
 
 class AdminController extends Controller
 {   
+    /**
+    * @var UserServiceInterface
+    */
+    private $userService;
+
+
+    /**
+     * AdminController constructor.
+     *
+     * @param UserServiceInterface $userService
+     */
+    public function __construct(
+        UserServiceInterface $userService
+    ) {
+        $this->user = $userService;
+    }
+
     public function index()
     {
         $users = $this->user->getAllUsers();
         
-        return view('backend.admin.index');       
+        return view('backend.admin.index')->with([
+            'users' => $users,
+        ]);;       
     }
 
     /**
