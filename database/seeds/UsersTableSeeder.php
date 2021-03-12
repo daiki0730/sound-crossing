@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name'       => '安倍',
-            'name_kana'  => '秋也',
+            'name_kana'  => 'アベ',
             'email'      => 'test@test.com',
             'password'   => Hash::make('secret'),
             'gender'     => 1,
@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'name'       => '加藤',
-            'name_kana'  => '育実',
+            'name_kana'  => 'カトウ',
             'email'      => 'test2@test.com',
             'password'   => Hash::make('secret2'),
             'gender'     => 2,
@@ -37,7 +37,7 @@ class UsersTableSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'name'       => '田辺',
-            'name_kana'  => '右京',
+            'name_kana'  => 'タナベ',
             'email'      => 'test3@test.com',
             'password'   => Hash::make('secret3'),
             'gender'     => 1,
@@ -49,7 +49,7 @@ class UsersTableSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'name'       => '酒田',
-            'name_kana'  => '絵里',
+            'name_kana'  => 'サカタ',
             'email'      => 'test4@test.com',
             'password'   => Hash::make('secret4'),
             'gender'     => 2,
