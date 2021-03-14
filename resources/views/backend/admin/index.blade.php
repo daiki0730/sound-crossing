@@ -34,20 +34,32 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Task</th>
-                                    <th>Progress</th>
-                                    <th>Label</th>
+                                    <th>写真</th>
+                                    <th>名前</th>
+                                    <th>名前カナ</th>
+                                    <th>性別</th>
+                                    <th>最終ログイン日時</th>
+                                    <th>アカウント作成日時</th>
+                                    <th>詳細</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
+                            @foreach($users as $user)
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $user->image }}</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->name_kana }}</td>
+                                        <td>{{ $user->gender }}</td>
+                                        <td>{{ $user->last_login_at }}</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-block btn-warning">
+                                                詳細
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            @endforeach
                         </table>
                     </div>
                     <div class="card-footer clearfix">
