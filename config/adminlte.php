@@ -225,7 +225,7 @@ return [
 
     'menu' => [
         [
-            'text' => 'ユーザー',
+            'text' => '',
             'url'  => '',
             'icon' => 'fas fa-users',
         ],
