@@ -9,12 +9,10 @@
             <div class="col-sm-6">
                 <h1>ユーザー一覧</h1>
             </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    {{-- TODO:パンくずリスト実装 --}}
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">ユーザー一覧</li>
-                </ol>
+            <div class="col-sm-2 ml-auto">
+                <a href="{{ route('backend.admin.create') }}" type="button" class="btn btn-block btn-secondary float-right">
+                    ユーザー作成
+                </a>
             </div>
         </div>
     </div>
@@ -27,7 +25,7 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header bg-info text-white">
+                    <div class="card-header bg-navy text-white">
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
                     <div class="card-body">
@@ -53,7 +51,7 @@
                                         <td>{{ $user->last_login_at }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-block btn-warning">
+                                            <button type="button" class="btn btn-block btn-secondary">
                                                 詳細
                                             </button>
                                         </td>

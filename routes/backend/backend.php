@@ -1,5 +1,5 @@
 <?php
 
-Route::namespace('Backend')->prefix('admin')->name('backend.')->group(function () {
-  Route::get('/', 'AdminController@index')->name('admin');
+Route::namespace('Backend')->prefix('admin')->name('backend.admin.')->group(function () {
+  Route::resource('/', 'AdminController');
 });
