@@ -33,7 +33,7 @@
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
                     <div class="card-body">
-                        ユーザー作成入
+                        ユーザー作成入力
                     </div>
                     <div class="card-footer clearfix">
                         {{-- TODO:ページネーション実装 --}}
