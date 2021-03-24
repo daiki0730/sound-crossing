@@ -33,7 +33,23 @@
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
                     <div class="card-body">
-                        ユーザー作成入力
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                  <!-- text input -->
+                                  <div class="form-group">
+                                    <label>Text</label>
+                                    <input type="text" class="form-control" placeholder="Enter ...">
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <label>Text Disabled</label>
+                                    <input type="text" class="form-control" placeholder="Enter ..." disabled="">
+                                  </div>
+                                </div>
+                              </div>
+                        </form>
                     </div>
                     <div class="card-footer clearfix">
                         {{-- TODO:ページネーション実装 --}}
