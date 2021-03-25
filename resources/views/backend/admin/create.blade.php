@@ -32,28 +32,58 @@
                     <div class="card-header bg-navy text-white">
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
-                    <div class="card-body">
-                        <form>
+
+                    <form action="{{ route('backend.admin.store') }}" method="post">
+                        @csrf
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-6">
-                                  <!-- text input -->
-                                  <div class="form-group">
-                                    <label>Text</label>
-                                    <input type="text" class="form-control" placeholder="Enter ...">
-                                  </div>
+                                    <div class="form-group">
+                                        <label>ニックネーム <span class="text-danger">※</span></label>
+                                        <input type="name" class="form-control" placeholder="ニックネーム">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ニックネーム(カナ) <span class="text-danger">※</span></label>
+                                        <input type="name_kana" class="form-control" placeholder="ニックネーム(カナ)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>メールアドレス <span class="text-danger">※</span></label>
+                                        <input type="email" class="form-control" placeholder="メールアドレス">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>パスワード <span class="text-danger">※</span></label>
+                                        <input type="password" class="form-control" placeholder="パスワード">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>性別</label>
+                                        <input type="gender" class="form-control" placeholder="性別">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>生年月日</label>
+                                        <input type="birthdate" class="form-control" placeholder="生年月日">
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
-                                  <div class="form-group">
-                                    <label>Text Disabled</label>
-                                    <input type="text" class="form-control" placeholder="Enter ..." disabled="">
-                                  </div>
+                                    <div class="form-group">
+                                        <label>自己紹介文</label>
+                                        <textarea name="biography" class="form-control" rows="3" placeholder="自己紹介文"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>自己紹介URL</label>
+                                        <input type="url" class="form-control" placeholder="URL">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>アカウント写真</label>
+                                        <input type="image" class="form-control" placeholder="アカウント写真">
+                                    </div>
                                 </div>
-                              </div>
-                        </form>
-                    </div>
-                    <div class="card-footer clearfix">
-                        {{-- TODO:ページネーション実装 --}}
-                    </div>
+                            </div>
+                        </div>
+                        <div class="card-footer" id="date-generate">
+                            <a href="{{ route('backend.admin.index') }}" class="btn btn-secondary float-right">キャンセル</a>
+                            <button type="submit" class="btn btn-primary float-right " style="margin-right: 10px">新規登録</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -10,4 +10,15 @@ class EloquentUserRepository implements UserContract
     {
         return User::all();
     }
+
+    public function create(array $data)
+    {
+        $user = new User();
+        $user->fill($data);
+
+        return DB::transaction(function () use ($user, $data) {
+            $user->save();
+            return $user;
+        });
+    }
 }

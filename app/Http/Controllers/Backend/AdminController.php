@@ -13,7 +13,6 @@ class AdminController extends Controller
     */
     private $userService;
 
-
     /**
      * AdminController constructor.
      *
@@ -22,12 +21,12 @@ class AdminController extends Controller
     public function __construct(
         UserServiceInterface $userService
     ) {
-        $this->user = $userService;
+        $this->userService = $userService;
     }
 
     public function index()
     {
-        $users = $this->user->getAllUsers();
+        $users = $this->userService->getAllUsers();
 
         return view('backend.admin.index')->with([
             'users' => $users,
@@ -52,7 +51,17 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
+        try {
+            $this->userService->create($request->all());
+        } catch (\Exception $e) {
+            Log::error($e->getMessage(), ['class' => __CLASS__, 'method' => __METHOD__]);
+            Log::error($e, ['class' => __CLASS__, 'method' => __METHOD__]);
+            return redirect()->route('backend.admin.index')
+                ->with('error_msg', "作成に失敗しました");
+        }
+
+        return redirect()->route('backend.admin')->with('success_msg', "ユーザー作成に成功しました");
     }
 
     /**
