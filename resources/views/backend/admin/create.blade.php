@@ -66,7 +66,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>自己紹介文</label>
-                                        <textarea name="biography" class="form-control" rows="3" placeholder="自己紹介文"></textarea>
+                                        <textarea name="biography" class="form-control" rows="4" placeholder="自己紹介文"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>自己紹介URL</label>
