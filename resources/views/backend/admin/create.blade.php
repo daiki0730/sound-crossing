@@ -35,46 +35,51 @@
 
                     <form action="{{ route('backend.admin.store') }}" method="post">
                         @csrf
+                        <input name="status" type="hidden" value="1">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>ニックネーム <span class="text-danger">※</span></label>
-                                        <input type="name" class="form-control" placeholder="ニックネーム">
+                                        <input type="text" name="name" class="form-control" placeholder="ニックネーム">
                                     </div>
                                     <div class="form-group">
                                         <label>ニックネーム(カナ) <span class="text-danger">※</span></label>
-                                        <input type="name_kana" class="form-control" placeholder="ニックネーム(カナ)">
+                                        <input type="text" name="name_kana" class="form-control" placeholder="ニックネーム(カナ)">
                                     </div>
                                     <div class="form-group">
                                         <label>メールアドレス <span class="text-danger">※</span></label>
-                                        <input type="email" class="form-control" placeholder="メールアドレス">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>パスワード <span class="text-danger">※</span></label>
-                                        <input type="password" class="form-control" placeholder="パスワード">
+                                        <input type="email" name="email" class="form-control" placeholder="メールアドレス">
                                     </div>
                                     <div class="form-group">
                                         <label>性別</label>
-                                        <input type="gender" class="form-control" placeholder="性別">
+                                        <input type="text" name="gender" class="form-control" placeholder="性別">
                                     </div>
                                     <div class="form-group">
                                         <label>生年月日</label>
-                                        <input type="birthdate" class="form-control" placeholder="生年月日">
+                                        <input type="datetime-local" name="birthdate" class="form-control" placeholder="生年月日">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>パスワード <span class="text-danger">※</span></label>
+                                        <input type="password" name="password" class="form-control" placeholder="パスワード">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>パスワード(確認用) <span class="text-danger">※</span></label>
+                                        <input type="password" name="password_confirmation" class="form-control" placeholder="パスワード">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>自己紹介文</label>
-                                        <textarea name="biography" class="form-control" rows="4" placeholder="自己紹介文"></textarea>
+                                        <textarea name="biography" class="form-control" rows="1" placeholder="自己紹介文"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>自己紹介URL</label>
-                                        <input type="url" class="form-control" placeholder="URL">
+                                        <input type="text" name="url" class="form-control" placeholder="URL">
                                     </div>
                                     <div class="form-group">
                                         <label>アカウント写真</label>
-                                        <input type="image" class="form-control" placeholder="アカウント写真">
+                                        <input type="text" name="image" class="form-control" placeholder="アカウント写真">
                                     </div>
                                 </div>
                             </div>

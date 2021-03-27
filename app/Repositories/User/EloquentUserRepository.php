@@ -3,6 +3,7 @@
 namespace App\Repository\User;
 
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class EloquentUserRepository implements UserContract
 {
