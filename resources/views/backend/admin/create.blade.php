@@ -32,6 +32,7 @@
                     <div class="card-header bg-navy text-white">
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
+
                     <form action="{{ route('backend.admin.store') }}" method="post">
                         @csrf
                         <input name="status" type="hidden" value="1">
