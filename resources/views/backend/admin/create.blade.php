@@ -44,7 +44,7 @@
                                         <input type="text" name="name" class="form-control @error("name") is-invalid @enderror" placeholder="ニックネーム">
                                         @error("name")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first(("name")) }}</strong>
+                                            <strong>{{ $errors->first("name") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
@@ -53,52 +53,52 @@
                                         <input type="text" name="name_kana" class="form-control @error("name_kana") is-invalid @enderror" placeholder="ニックネーム(カナ)">
                                         @error("name_kana")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("name_kana") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>メールアドレス <span class="text-danger">※</span></label>
                                         <input type="email" name="email" class="form-control @error("email") is-invalid @enderror" placeholder="メールアドレス">
-                                        @error("")
+                                        @error("email")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("email") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>性別</label>
                                         <input type="text" name="gender" class="form-control @error("gender") is-invalid @enderror" placeholder="性別">
-                                        @error("")
+                                        @error("gender")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("gender") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>生年月日</label>
                                         <input type="datetime-local" name="birthdate" class="form-control @error("birthdate") is-invalid @enderror" placeholder="生年月日">
-                                        @error("")
+                                        @error("birthdate")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("birthdate") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>パスワード <span class="text-danger">※</span></label>
                                         <input type="password" name="password" class="form-control @error("password") is-invalid @enderror" placeholder="パスワード">
-                                        @error("")
+                                        @error("password")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("password") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>パスワード(確認用) <span class="text-danger">※</span></label>
                                         <input type="password" name="password_confirmation" class="form-control @error("password_confirmation") is-invalid @enderror" placeholder="パスワード">
-                                        @error("")
+                                        @error("password_confirmation")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("password_confirmation") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
@@ -107,27 +107,27 @@
                                     <div class="form-group">
                                         <label>自己紹介文</label>
                                         <textarea name="biography" class="form-control @error("") is-invalid @enderror" rows="1" placeholder="自己紹介文"></textarea>
-                                        @error("")
+                                        @error("biography")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("biography") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>自己紹介URL</label>
                                         <input type="text" name="url" class="form-control @error("") is-invalid @enderror" placeholder="URL">
-                                        @error("")
+                                        @error("url")
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("url") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>アカウント写真</label>
                                         <input type="text" name="image" class="form-control @error("") is-invalid @enderror" placeholder="アカウント写真">
-                                        @error('')
+                                        @error('image')
                                         <div class="invalid-feedback">
-                                            <strong>{{ $errors->first("") }}</strong>
+                                            <strong>{{ $errors->first("image") }}</strong>
                                         </div>
                                         @enderror
                                     </div>
