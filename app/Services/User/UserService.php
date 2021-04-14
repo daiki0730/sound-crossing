@@ -18,4 +18,9 @@ class UserService implements UserServiceInterface
     {
         return $this->userContract->getAllUsers();
     }
+
+    public function create(array $data)
+    {
+        return $this->userContract->create($data);
+    }
   }
