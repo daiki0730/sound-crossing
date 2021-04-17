@@ -75,7 +75,10 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        //ルーティング作る
+        //vieｗからidを送る
+        //ユーザーの情報とってくる
+        //viewに返す
     }
 
     /**
