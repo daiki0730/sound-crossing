@@ -51,9 +51,11 @@
                                         <td>{{ $user->last_login_at }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-block btn-secondary">
-                                                詳細
-                                            </button>
+                                            <div class="col-sm-2 ml-auto">
+                                                <a href="{{ route('backend.admin.show', ['id' => $user->id]) }}" type="button" class="btn btn-block btn-secondary">
+                                                    ユーザー作成
+                                                </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
