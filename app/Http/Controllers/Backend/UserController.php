@@ -8,7 +8,7 @@ use App\Services\User\UserServiceInterface;
 use Illuminate\Support\Facades\Log;
 use App\Http\Requests\Backend\UserRequest;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     /**
     * @var UserServiceInterface
