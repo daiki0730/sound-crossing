@@ -75,6 +75,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
+        //ルーティングの修正
         //vieｗからidを送る
         //ユーザーの情報とってくる
         return view('backend.admin.show');
