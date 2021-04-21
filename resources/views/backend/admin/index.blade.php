@@ -10,7 +10,7 @@
                 <h1>ユーザー一覧</h1>
             </div>
             <div class="col-sm-2 ml-auto">
-                <a href="{{ route('backend.admin.create') }}" type="button" class="btn btn-block btn-secondary float-right">
+                <a href="{{ route('backend.admin.users.create') }}" type="button" class="btn btn-block btn-secondary float-right">
                     ユーザー作成
                 </a>
             </div>
@@ -52,7 +52,7 @@
                                         <td>{{ $user->created_at }}</td>
                                         <td>
                                             <div class="col-sm-2 ml-auto">
-                                                <a href="{{ route('backend.admin.show', ['id' => $user->id]) }}" type="button" class="btn btn-block btn-secondary">
+                                                <a href="{{ route('backend.admin.users.show', ['user' => $user->id]) }}" type="button" class="btn btn-block btn-secondary">
                                                     ユーザー作成
                                                 </a>
                                             </div>
