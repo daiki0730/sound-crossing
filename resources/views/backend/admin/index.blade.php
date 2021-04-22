@@ -19,6 +19,7 @@
 </section>
 @stop
 
+{{dd($users)}}
 @section('content')
 <section class="content">
     <div class="container-fluid">
