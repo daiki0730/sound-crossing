@@ -32,7 +32,6 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->userService->getAllUsers();
-
         return view('backend.admin.index')->with([
             'users' => $users,
         ]);
@@ -53,7 +52,7 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         try {
-            $this->userService->create($request->all());
+            $this->userService->create($request->validated());
         } catch (\Exception $e) {
             Log::error($e->getMessage(), ['class' => __CLASS__, 'method' => __METHOD__]);
             Log::error($e, ['class' => __CLASS__, 'method' => __METHOD__]);
