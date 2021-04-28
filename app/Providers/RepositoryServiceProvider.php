@@ -7,8 +7,8 @@ use Illuminate\Support\ServiceProvider;
 class RepositoryServiceProvider extends ServiceProvider
 {
     public $bindings = [
-        \App\Repository\Admin\AdminContract::class => \App\Repository\Admin\EloquentAdminRepository::class,
-        \App\Repository\User\UserContract::class => \App\Repository\User\EloquentUserRepository::class
+        \App\Repositories\Admin\AdminContract::class => \App\Repositories\Admin\EloquentAdminRepository::class,
+        \App\Repositories\User\UserContract::class => \App\Repositories\User\EloquentUserRepository::class
     ];
 
     /**
