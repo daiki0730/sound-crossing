@@ -47,15 +47,11 @@
                                         <td>{{ $user->image }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->name_kana }}</td>
-                                        <td>{{ $user->gender }}</td>
-                                        <td>{{ $user->last_login_at }}</td>
+                                        <td>{{ $user->gender?: "-" }}</td>
+                                        <td>{{ $user->last_login_at ?: "-" }}</td>
                                         <td>{{ $user->created_at }}</td>
-                                        <td>
-                                            <div class="col-sm-2 ml-auto">
-                                                <a href="{{ route('backend.admin.users.show', ['user' => $user->id]) }}" type="button" class="btn btn-block btn-secondary">
-                                                    ユーザー作成
-                                                </a>
-                                            </div>
+                                        <td class="">
+                                            <a href="{{ route('backend.admin.users.show', ['user' => $user->id]) }}" type="button" class="btn btn-secondary">詳細</a>
                                         </td>
                                     </tr>
                                 </tbody>
