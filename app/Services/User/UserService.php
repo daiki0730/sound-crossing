@@ -38,4 +38,13 @@ class UserService implements UserServiceInterface
     {
         return $this->userContract->create($data);
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getUserById($id)
+    {
+        return $this->userContract->getUserById($id);
+    }
   }

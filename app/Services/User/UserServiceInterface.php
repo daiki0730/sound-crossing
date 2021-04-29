@@ -14,4 +14,10 @@ interface UserServiceInterface
      * @return mixed
      */
     public function create(array $data);
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getUserById($id);
 }

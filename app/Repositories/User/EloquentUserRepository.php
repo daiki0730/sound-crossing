@@ -28,4 +28,13 @@ class EloquentUserRepository implements UserContract
             return $user;
         });
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getUserById($id)
+    {
+        return User::Where($id);
+    }
 }

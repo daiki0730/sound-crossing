@@ -32,7 +32,7 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->userService->getAllUsers();
-        return view('backend.admin.index')->with([
+        return view('backend.admin.user.index')->with([
             'users' => $users,
         ]);
     }
@@ -42,7 +42,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('backend.admin.create');
+        return view('backend.admin.user.create');
     }
 
     /**
@@ -69,10 +69,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //ルーティングの修正
-        //vieｗからidを送る
-        //ユーザーの情報とってくる
-        return view('backend.admin.show');
+        $users = $this->userService->getUserById($id);
+        return view('backend.admin.user.show');
     }
 
     /**

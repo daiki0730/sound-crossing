@@ -14,7 +14,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
                     {{-- TODO:パンくずリスト実装 --}}
-                    <li class="breadcrumb-item"><a href="{{ route('backend.admin.index') }}">ユーザー一覧</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('backend.admin.users.index') }}">ユーザー一覧</a></li>
                     <li class="breadcrumb-item active">ユーザー作成</li>
                 </ol>
             </div>
@@ -33,7 +33,7 @@
                         <h3 class="card-title">ユーザー一覧</h3>
                     </div>
 
-                    <form action="{{ route('backend.admin.store') }}" method="post">
+                    <form action="{{ route('backend.admin.users.store') }}" method="post">
                         @csrf
                         <input name="status" type="hidden" value="1">
                         <div class="card-body">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="card-footer" id="date-generate">
-                            <a href="{{ route('backend.admin.index') }}" class="btn btn-secondary float-right">キャンセル</a>
+                            <a href="{{ route('backend.admin.users.index') }}" class="btn btn-secondary float-right">キャンセル</a>
                             <button type="submit" class="btn btn-primary float-right " style="margin-right: 10px">新規登録</button>
                         </div>
                     </form>
