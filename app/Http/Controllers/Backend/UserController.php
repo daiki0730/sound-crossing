@@ -69,8 +69,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $users = $this->userService->getUserById($id);
-        return view('backend.admin.user.show');
+        $user = $this->userService->getUserById($id);
+        return view('backend.admin.user.show')->with([
+            'user' => $user,
+        ]);
     }
 
     /**

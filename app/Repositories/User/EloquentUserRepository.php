@@ -35,6 +35,6 @@ class EloquentUserRepository implements UserContract
      */
     public function getUserById($id)
     {
-        return User::Where($id);
+        return User::find($id);
     }
 }
