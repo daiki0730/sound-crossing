@@ -51,7 +51,7 @@
                                         <td>{{ $user->last_login_at ?: "-" }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td class="">
-                                            <a href="{{ route('backend.admin.users.show', ['user' => $user->id]) }}" type="button" class="btn btn-secondary">詳細</a>
+                                            <a href="{{ route('backend.admin.users.edit', ['user' => $user->id]) }}" type="button" class="btn btn-secondary">詳細</a>
                                         </td>
                                     </tr>
                                 </tbody>

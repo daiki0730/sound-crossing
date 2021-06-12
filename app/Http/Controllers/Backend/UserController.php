@@ -65,22 +65,13 @@ class UserController extends Controller
 
     /**
      * @param $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function show($id)
-    {
-        $user = $this->userService->getUserById($id);
-        return view('backend.admin.user.show')->with([
-            'user' => $user,
-        ]);
-    }
-
-    /**
-     * @param $id
      */
     public function edit($id)
     {
-        //
+        $user = $this->userService->getUserById($id);
+        return view('backend.admin.user.edit')->with([
+            'user' => $user,
+        ]);
     }
 
     /**
