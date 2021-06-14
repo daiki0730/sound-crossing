@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class EloquentUserRepository implements UserContract
 {
     /**
-     * @return User[]|\Illuminate\Database\Eloquent\Collection
+     * {@inheritdoc}
      */
     public function getAllUsers()
     {
@@ -15,8 +15,7 @@ class EloquentUserRepository implements UserContract
     }
 
     /**
-     * @param array $data
-     * @return mixed
+     * {@inheritdoc}
      */
     public function create(array $data)
     {
@@ -30,11 +29,24 @@ class EloquentUserRepository implements UserContract
     }
 
     /**
-     * @param $id
-     * @return mixed
+     * {@inheritdoc}
      */
     public function getUserById($id)
     {
         return User::find($id);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update(array $array, int $id)
+    {
+        $user = User::find($id);
+        $user->fill($array);
+
+        return DB::transaction(function () use ($user) {
+            $user->update();
+            return $user;
+        });
     }
 }

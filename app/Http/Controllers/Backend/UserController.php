@@ -60,7 +60,7 @@ class UserController extends Controller
                 ->with('error_msg', "作成に失敗しました");
         }
 
-        return redirect()->route('backend.admin.users.index')->with('success_msg', "ユーザー作成に成功しました");
+        return redirect()->route('backend.admin.users.index');
     }
 
     /**
@@ -76,11 +76,14 @@ class UserController extends Controller
 
     /**
      * @param Request $request
-     * @param $id
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,int $id)
     {
-        //
+        $this->userService->update($request->all(), $id);
+
+        return redirect()->route('backend.admin.users.index');
     }
 
     /**

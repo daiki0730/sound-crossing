@@ -21,4 +21,11 @@ interface UserContract
      * @return mixed
      */
     public function getUserById($id);
+
+    /**
+     * @param array $array
+     * @param int $id
+     * @return mixed
+     */
+    public function update(array $array, int $id);
 }

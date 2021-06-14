@@ -47,4 +47,14 @@ class UserService implements UserServiceInterface
     {
         return $this->userContract->getUserById($id);
     }
+
+    /**
+     * @param array $array
+     * @param int $id
+     * @return mixed
+     */
+    public function update(array $array, int $id)
+    {
+        return $this->userContract->update($array, $id);
+    }
   }
