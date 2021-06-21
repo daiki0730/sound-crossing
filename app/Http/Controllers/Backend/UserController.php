@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Services\User\UserServiceInterface;
 use Illuminate\Support\Facades\Log;
-use App\Http\Requests\Backend\UserRequest;
+use App\Http\Requests\Backend\CreateUserRequest;
 
 
 class UserController extends Controller
@@ -46,10 +46,10 @@ class UserController extends Controller
     }
 
     /**
-     * @param UserRequest $request
+     * @param CreateUserRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(UserRequest $request)
+    public function store(CreateUserRequest $request)
     {
         try {
             $this->userService->create($request->validated());
