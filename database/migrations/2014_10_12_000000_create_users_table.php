@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
@@ -19,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('name_kana')->comment('カナ名前');
             $table->string('email')->unique()->comment('メールアドレス');
             $table->string('password')->comment('パスワード');
-            $table->string('gender')->comment('性別');
-            $table->string('birthdate')->comment('生年月日');
+            $table->string('gender')->nullable()->comment('性別');
+            $table->string('birthdate')->nullable()->comment('生年月日');
             $table->string('biography')->nullable()->comment('自己紹介文');
             $table->string('image')->nullable()->comment('アカウント写真');
             $table->string('url')->nullable()->comment('URL');
@@ -30,9 +31,11 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        DB::statement("ALTER TABLE users COMMENT 'ユーザー'");
     }
 
-    
+
     /**
      * Reverse the migrations.
      *

@@ -10,7 +10,7 @@
                 <h1>ユーザー一覧</h1>
             </div>
             <div class="col-sm-2 ml-auto">
-                <a href="{{ route('backend.admin.create') }}" type="button" class="btn btn-block btn-secondary float-right">
+                <a href="{{ route('backend.admin.users.create') }}" type="button" class="btn btn-block btn-secondary float-right">
                     ユーザー作成
                 </a>
             </div>
@@ -47,13 +47,11 @@
                                         <td>{{ $user->image }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->name_kana }}</td>
-                                        <td>{{ $user->gender }}</td>
-                                        <td>{{ $user->last_login_at }}</td>
+                                        <td>{{ $user->gender?: "-" }}</td>
+                                        <td>{{ $user->last_login_at ?: "-" }}</td>
                                         <td>{{ $user->created_at }}</td>
-                                        <td>
-                                            <button type="button" class="btn btn-block btn-secondary">
-                                                詳細
-                                            </button>
+                                        <td class="">
+                                            <a href="{{ route('backend.admin.users.edit', ['user' => $user->id]) }}" type="button" class="btn btn-secondary">詳細</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -75,5 +73,4 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
 @stop

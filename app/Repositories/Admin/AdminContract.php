@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Repository\Admin;
+namespace App\Repositories\Admin;
 
 interface AdminContract
 {
     /**
-     * create admin
      * @param array $data
-     * @return App\Models\Admin
+     * @return mixed
      */
     public function create(array $data);
 }
