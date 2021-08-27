@@ -12,6 +12,18 @@ class AppServiceProvider extends ServiceProvider
     ];
 
     /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        foreach ($this->bindings as $abstruct => $concrete) {
+            $this->app->bind($abstruct, $concrete);
+        }
+    }
+
+    /**
      * Bootstrap any application services.
      *
      * @return void
