@@ -76,7 +76,6 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(base_path('routes/backend/backend.php'));
     }
-
     
     /**
      * Define the "api" routes for the application.
