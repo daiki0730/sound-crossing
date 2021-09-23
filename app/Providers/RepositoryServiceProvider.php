@@ -24,6 +24,18 @@ class RepositoryServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        foreach ($this->bindings as $abstruct => $concrete) {
+            $this->app->bind($abstruct, $concrete);
+        }
+    }
+
+    /**
      * Bootstrap services.
      *
      * @return void
