@@ -7,9 +7,8 @@ use App\Models\Admin;
 interface AdminServiceInterface
 {
     /**
-     * create admin
      * @param array $data
-     * @return App\Models\Admin
+     * @return mixed
      */
     public function create(array $data);
 }
