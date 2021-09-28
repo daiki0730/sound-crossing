@@ -6,7 +6,7 @@ namespace App\Services\Admin;
 use App\Models\Admin;
 use App\Repository\Admin\AdminContract;
 
-class AdminService implements AdminServiceInterface
+abstract class AdminService implements AdminServiceInterface
 {
     /* ClubContract **/
     private $adminContract;
