@@ -16,11 +16,11 @@ abstract class AdminService implements AdminServiceInterface
         $this->adminContract = $adminContract;
     }
 
-    // /**
-    //  * {@inheritdoc}
-    //  */
-    // public function create(array $data)
-    // {
-    //     return $this->adminContract->create($data);
-    // }
+     /**
+      * {@inheritdoc}
+      */
+     public function create(array $data)
+     {
+         return $this->adminContract->create($data);
+     }
 }
