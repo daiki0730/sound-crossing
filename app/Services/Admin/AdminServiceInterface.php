@@ -12,9 +12,9 @@ interface AdminServiceInterface
      */
     public function create(array $data);
 
-    /**
-     * @param array $data
-     * @return mixed
-     */
-    public function update(array $data);
+//    /**
+//     * @param array $data
+//     * @return mixed
+//     */
+//    public function update(array $data);
 }
