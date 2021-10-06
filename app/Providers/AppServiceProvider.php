@@ -10,6 +10,7 @@ class AppServiceProvider extends ServiceProvider
         \App\Services\Admin\AdminServiceInterface::class => \App\Services\Admin\AdminService::class,
         \App\Services\User\UserServiceInterface::class => \App\Services\User\UserService::class
     ];
+    
 
     /**
      * Bootstrap any application services.
