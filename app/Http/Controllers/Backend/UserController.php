@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Services\User\UserServiceInterface;
 use Illuminate\Support\Facades\Log;
+use App\Http\Requests\Backend\CreateUserRequest;
 
 
 class UserController extends Controller
