@@ -6,7 +6,7 @@ stop:
 
 restart:
 	docker-compose restart
-	
+
 ps:
 	docker ps
 
